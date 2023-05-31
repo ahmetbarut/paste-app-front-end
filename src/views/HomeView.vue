@@ -22,7 +22,7 @@ import axios from 'axios';
 const pastes = ref<Paste[]>([]);
 
 onMounted(() => {
-  axios.get('http://127.0.0.1:8000/api/pastes')
+  axios.get('https://paste.ahmetbarut.net/api/pastes')
     .then(res => {
       pastes.value = res.data;
     })

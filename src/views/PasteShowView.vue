@@ -8,7 +8,7 @@ const route = useRoute();
 const paste = ref<Paste>();
 
 onMounted(() => {
-  axios.get('http://127.0.0.1:8000/api/pastes/' + route.params.id)
+  axios.get('https://paste.ahmetbarut.net/api/pastes/' + route.params.id)
     .then(res => {
       paste.value = res.data;
     })

@@ -7,7 +7,7 @@ const router = useRouter();
 const content = ref('');
 
 const submitForm = () => {
-  axios.post('http://127.0.0.1:8000/api/pastes', {
+  axios.post('https://paste.ahmetbarut.net/api/pastes', {
     content: content.value
   })
     .then(res => {
