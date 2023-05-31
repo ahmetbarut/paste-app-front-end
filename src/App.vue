@@ -1,30 +1,24 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <div class="bg-neutral-100">
+      <nav class="flex items-center p-4">
+        <h1 class="text-2xl font-bold w-2/3 text-black">Paste</h1>
+        <ul class="flex space-x-4">
+          <li>
+            <RouterLink class="text-black" :to="{name: 'home'}">Home</RouterLink>
+          </li>
+          <li>
+            <RouterLink class="text-black" :to="{name: 'paste'}">Paste New</RouterLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bg-neutral-200">
+      <router-view />
+    </div>
+  </div>
 </template>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
